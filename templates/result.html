@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f1f5f9;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .calculation-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 15px; /* Padding di dalam kartu */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #343a40;
+            font-weight: 700;
+            font-size: 2rem; /* Atur ukuran font sesuai kebutuhan */
+            margin: 5px 0; /* Atur jarak atas dan bawah judul */
+            padding: 5px 0; /* Menambahkan padding untuk ruang di sekitar teks */
+        }
+
+        .card-body {
+            padding: 5px; /* Menambahkan padding di dalam card-body */
+        }
+
+        .card-title {
+            color: #007bff;
+            font-weight: 600;
+            margin-top: 1px; /* Atur jarak atas untuk judul di dalam card */
+            margin-bottom: 1px; /* Atur jarak bawah untuk judul di dalam card */
+        }
+
+        p {
+            font-size: 1rem;
+            color: #495057;
+            margin: 1px 0; /* Mengatur jarak atas dan bawah untuk paragraf */
+        }
+
+        a.btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        a.btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <h1>Calculation Result</h1> <!-- Judul utama halaman -->
+        </header>
+
+        <div class="calculation-card">
+            <div class="card-body">
+                <h5 class="card-title">Input Data</h5>
+                <p>Freeness Input: {{ freeness_input }} CSF</p>
+                <p>Consistency Input: {{ consistency_input }}%</p>
+                <p>Temperature Input: {{ temperature_input }}°C</p>
+
+                <h5 class="card-title mt-4">Results</h5>
+                <p>Correction for Consistency: {{ correction_consistency }}</p>
+                <p>Correction for Temperature: {{ correction_temperature }}</p>
+                <p><strong>Total Freeness: {{ freeness_total }} CSF</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                window.location.href = '/'; 
+            }
+        });
+    </script>
+</body>
+</html>
