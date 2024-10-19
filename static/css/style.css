@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa; /* Warna latar belakang */
+}
+
+.logo {
+    width: 200px; /* Ukuran lebar logo */
+    max-width: 100%; /* Pastikan tidak lebih dari lebar kontainer */
+    height: auto; /* Mempertahankan proporsi */
+    margin-bottom: 20px; /* Jarak di bawah logo */
+}
+
+.container {
+    max-width: 600px; /* Lebar maksimum kontainer */
+    margin: 0 auto; /* Rata tengah */
+}
+
+form {
+    background-color: #ffffff; /* Warna latar belakang form */
+    padding: 20px; /* Ruang dalam form */
+    border-radius: 8px; /* Sudut membulat */
+}
+
+.alert {
+    margin-bottom: 20px; /* Jarak bawah alert */
+}
